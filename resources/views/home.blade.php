@@ -1,9 +1,9 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Contact</title>
-</head>
-<body>
-    <h1>Contact me!</h1>
-</body>
-</html>
+@extends('layout')
+
+@section('content')
+  
+  <div class="col-xs-3">
+    ホーム画面
+    <h1>タイトル</h1>
+  </div>
+@endsection
