@@ -1564,7 +1564,7 @@ input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- */
 header {
-	  margin-top: -66px;
+	  margin-top: 0px;
     width: 100%;
     background:  #2E9AFE;
     background-size: 46px 29px;
