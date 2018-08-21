@@ -10,7 +10,7 @@
 </head>
 <body>
   @include('header')
-  <div class="container">
+  <div class="container" style="padding-top: 120px; ">
     <div class="row">
       {{-- リクエストに応じてコンテンツ部分のみ入れ替える --}}
       @yield('content')
@@ -19,10 +19,10 @@
   @include('footer')
 
   {{-- js埋め込み --}}
-  <script type="text/javascript" src="{{asset('js/main.js')}}"></script>
   <script type="text/javascript" src="{{asset('js/jquery-3.1.1.js')}}"></script>
   <script type="text/javascript" src="{{asset('js/jquery-migrate-1.4.1.js')}}"></script>
   <script type="text/javascript" src="{{asset('js/bootstrap.js')}}"></script>
+  <script type="text/javascript" src="{{asset('js/main.js')}}"></script>
   @yield('js')
 </body>
 </html>
