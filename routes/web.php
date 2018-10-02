@@ -23,6 +23,9 @@ Route::get('/login', function () {
 Route::get('/home', function () {
     return view('home');
 });
+Route::get('/event_list', function () {
+    return view('event_list');
+});
 Route::get('/eventNew', function () {
     return view('eventNew');
 });
