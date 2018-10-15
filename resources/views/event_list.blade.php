@@ -35,6 +35,18 @@ color:#7fbfff;
 .padding0{
   padding: 0;
 }
+.participants{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.p-row {
+  margin-bottom: 50px;
+}
+.buttons {
+  text-align: center;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="{{asset('css/flickity.min.css')}}">
 <script type="text/javascript" src="{{asset('js/flickity.pkgd.min.js')}}"></script>
@@ -62,37 +74,41 @@ color:#7fbfff;
           <img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" alt="baby-1151351_1920" width="100%" class="aligncenter size-full wp-image-425" alt="baby-1151351_1920" />
           </div>
           <div class="modal-img_footer">
-          <p>イベント名</p>
-          <p>回答期限：9月5日02時20分</p>
-          <p>開催場所: シクノイ</p>
-          <p>開催日: 4月5日</p>
-          <p>開始時間:　03時30分</p>
-          <p>参加予定人数 2人/25人</p>
-          詳細
-          <p>やっっっっっっっっっっっっっっっっっばいぜええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええ</p>
-          <div class="row">
-            <div class="col-xs-6">
-              <p>参加者</p>
-              <div class="flickity-syncer">
-                <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" width="200px"/><br/>画像1</div>
-                <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" width="200px"/><br/>画像2</div>
-                <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" width="200px"/><br/>画像3</div>
-                <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" width="200px"/><br/>画像4</div>
-                <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" width="200px"/><br/>画像5</div>
+            <p>イベント名</p>
+            <p>回答期限：9月5日02時20分</p>
+            <p>開催場所: シクノイ</p>
+            <p>開催日: 4月5日</p>
+            <p>開始時間:　03時30分</p>
+            <p>参加予定人数 2人/25人</p>
+            詳細
+            <p>やっっっっっっっっっっっっっっっっっばいぜええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええ</p>
+            <div class="row p-row">
+              <div class="col-xs-6">
+                <p>参加者</p>
+                <div class="flickity-syncer">
+                  <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" class="participants"/></div>
+                  <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" class="participants"/></div>
+                  <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" class="participants"/></div>
+                  <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" class="participants"/></div>
+                  <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" class="participants"/></div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <p>興味あり</p>
+                <div class="flickity-syncer">
+                  <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" class="participants" /></div>
+                  <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" class="participants"/></div>
+                  <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" class="participants"/></div>
+                  <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" class="participants"/></div>
+                  <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" class="participants"/></div>
+                </div>
               </div>
             </div>
-            <div class="col-xs-6">
-              <p>興味あり</p>
-              <div class="flickity-syncer">
-                <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" width="200px"/><br/>画像1</div>
-                <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" width="200px"/><br/>画像2</div>
-                <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" width="200px"/><br/>画像3</div>
-                <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" width="200px"/><br/>画像4</div>
-                <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" width="200px"/><br/>画像5</div>
-              </div>
+            <div class="buttons">
+            <button type="button" class="btn btn-success" data-dismiss="modal">参加する</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal">興味あり</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal">閉じる</button>
             </div>
-          </div>
-          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
