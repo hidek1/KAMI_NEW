@@ -1,0 +1,110 @@
+/* **********Common Part********** */
+/* Padding */
+.kill__all-padding {
+  padding: 0px 0px 0px 0px;
+}
+
+.kill__rightleft-padding {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.kill__topbottom-padding {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* Marging */
+.kill__all-marging {
+  margin: 0px 0px 0px 0px;
+}
+
+.kill__rightleft-marging {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.kill__topbottom-marging {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* Font Size (Reference Font Size 14)*/
+
+.golden-ratio-font__larger5 {
+  font-size: 29.63px;
+}
+
+.golden-ratio-font__larger4 {
+  font-size: 25.51px;
+}
+
+.golden-ratio-font__larger3 {
+  font-size: 21.95px;
+}
+
+.golden-ratio-font__larger2 {
+  font-size: 18.90px;
+}
+
+.golden-ratio-font__larger1 {
+  font-size: 16.27px;
+}
+
+.golden-ratio-font__smaller1 {
+  font-size: 12.05px;
+}
+
+.golden-ratio-font__smaller2 {
+  font-size: 10.37px;
+}
+
+.golden-ratio-font__smaller3 {
+  font-size: 8.93px;
+}
+
+.golden-ratio-font__smaller4 {
+  font-size: 7.68px;
+}
+
+.golden-ratio-font__smaller5 {
+  font-size: 6.61px;
+}
+
+
+/* **********Unique Part********** */
+.input__item {
+  width: 100%;
+  height: 5rem;
+  color: black;/*文字色*/
+  background: yellow;/*背景色*/
+  border-left: solid 5px blue;/*左枠線色*/
+}
+
+.input__space {
+  width: 100%;
+  height: 5rem;
+  background: gray;
+  border: none;
+}
+
+.input__space--amount {
+  width: 100%;
+  background: gray;
+  border: none;
+  display: inline;
+}
+
+.button__cancel {
+  color: blue;
+  background-color: yellow;
+  width: 100%;
+  height: 5rem;
+}
+
+.button__make {
+  color: yellow;
+  background-color: blue;
+  width: 100%;
+  height: 5rem;
+}

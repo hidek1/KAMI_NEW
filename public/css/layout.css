@@ -1,0 +1,22 @@
+.navbar-color {
+  background-color: #2E9AFE;
+}
+.navbar {
+  min-height: 100px;
+}
+.nav-text {
+  color: white;
+}
+.nav-text-height {
+  margin-top: 20px;
+}
+.icon-bar {
+  background-color: white;
+}
+.nav-button {
+  margin-top: 30px;
+}
+footer {
+  margin-top: 100px;
+  text-align: center;
+}
