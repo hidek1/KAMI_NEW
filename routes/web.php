@@ -20,17 +20,17 @@ Route::get('/register', function () {
 Route::get('/login', function () {
     return view('login');
 });
-Route::get('/home', function () {
-    return view('home');
+Route::get('/index', function () {
+    return view('index');
 });
 Route::get('/event_list', function () {
     return view('event_list');
 });
-Route::get('/eventNew', function () {
-    return view('eventNew');
+Route::get('/event_new', function () {
+    return view('event_new');
 });
-Route::get('/eventEdit', function () {
-    return view('eventEdit');
+Route::get('/event_edit', function () {
+    return view('event_edit');
 });
 Route::get('/profile', function () {
     return view('profile');

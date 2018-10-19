@@ -77,7 +77,32 @@
   <div class="col-md-3 col-xs-8">
     <h2>Taro Yamada</h2>
     <h3>部屋番号: 1001</h3>
-    <a href="#" class="square_btn">プロフィールを編集</a>
+    <a href="#" class="square_btn" data-toggle="modal" data-target="#myModal-data2">プロフィールを編集</a>
+      <div class="modal fade" id="myModal-data2" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title">プロフィール編集</h4>
+                  </div>
+                  <div class="modal-body">
+                      <form>
+                          <div class="form-group">
+                              <label for="exampleInput1">名前</label>
+                              <input type="text" class="form-control" id="exampleInput1" placeholder="#">
+                          </div>
+                          <div class="form-group">
+                              <label for="exampleInput2">部屋番号</label>
+                              <input type="text" class="form-control" id="exampleInput2" placeholder="#">
+                          </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="modal-save" data-dismiss="modal">更新</button>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
 </div>
 <div class="row menus">
@@ -132,8 +157,8 @@
               </div>
             </div>
             <div class="buttons">
-            <button type="button" class="btn btn-success" data-dismiss="modal">参加する</button>
-            <button type="button" class="btn btn-success" data-dismiss="modal">興味あり</button>
+            <button type="button" class="btn btn-primary">✨参加する</button>
+            <button type="button" class="btn btn-primary">⭐️興味あり</button>
             <button type="button" class="btn btn-success" data-dismiss="modal">閉じる</button>
             </div>
           </div>
@@ -359,5 +384,9 @@ for( var i=0,l=elms.length; l>i; i++ )
   flickitySyncer[i] = new Flickity( elms[i] , {contain: true} ) ;
 }
 }());
+$("#modal-save").click(function () {
+    var input1 = $("#exampleInput1").val();
+    var input2 = $("#exampleInput2").val();
+});
 </script>
 @endsection

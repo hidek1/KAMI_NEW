@@ -105,8 +105,8 @@ color:#7fbfff;
               </div>
             </div>
             <div class="buttons">
-            <button type="button" class="btn btn-success" data-dismiss="modal">参加する</button>
-            <button type="button" class="btn btn-success" data-dismiss="modal">興味あり</button>
+            <button type="button" class="btn btn-primary">✨参加する</button>
+            <button type="button" class="btn btn-primary">⭐️興味あり</button>
             <button type="button" class="btn btn-success" data-dismiss="modal">閉じる</button>
             </div>
           </div>
