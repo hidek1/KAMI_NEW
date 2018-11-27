@@ -17,8 +17,8 @@ class CreateEventsTable extends Migration
             $table->increments('event_id');
             $table->integer('organizer_id')->unsigned();
             $table->string('event_name', 255);
-            $table->string('event_place', 255);
             $table->dateTime('start');
+            $table->string('event_place', 255);
             $table->string('event_pic', 100);
             $table->dateTime('meet_time');
             $table->string('meet_place', 255);
