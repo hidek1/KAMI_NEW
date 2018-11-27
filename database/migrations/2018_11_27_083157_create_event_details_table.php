@@ -18,7 +18,7 @@ class CreateEventDetailsTable extends Migration
             $table->integer('max')->default(0);
             $table->integer('min')->default(0);
             $table->text('invite')->nullable();
-            $table->text('detail')->nsullable();
+            $table->text('detail')->nullable();
             $table->integer('price')->default(0);
             $table->tinyInteger('graduation_fl')->default(0);
             $table->tinyInteger('teachers_fl')->default(0);

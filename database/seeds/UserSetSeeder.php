@@ -13,28 +13,26 @@ class UserSetSeeder extends Seeder
     {
         DB::table('users')->insert([
             'user_name' => str_random(10),
-            'room_no' => 815,
-            'user_pic' => "assets/images/" . str_random(8) . ".png",
+            'room_no' => "815",
+            'user_pic' => "/images/" . str_random(8) . ".png",
         ]);
         DB::table('users')->insert([
             'user_name' => str_random(10),
-            'room_no' => 1016,
-            'user_pic' => "assets/images/" . str_random(8) . ".png",
+            'room_no' => "1016",
+            'user_pic' => "/images/" . str_random(8) . ".png",
         ]);
         DB::table('users')->insert([
             'user_name' => str_random(10),
-            'room_no' => 313,
-            'user_pic' => "assets/images/" . str_random(8) . ".png",
+            'room_no' => "11931124",
+            'user_pic' => "/images/" . str_random(8) . ".png",
         ]);
         DB::table('users')->insert([
-            'user_name' => str_random(10),
-            'room_no' => 2018,
-            'user_pic' => "assets/images/" . str_random(8) . ".png",
+            'user_pic' => "/images/" . str_random(8) . ".png",
         ]);
         DB::table('users')->insert([
             'user_name' => "織田信長",
-            'room_no' => 1582,
-            'user_pic' => "assets/images/" . str_random(8) . ".png",
+            'room_no' => "1582",
+            'user_pic' => "/images/" . str_random(8) . ".png",
         ]);
     }
 }
