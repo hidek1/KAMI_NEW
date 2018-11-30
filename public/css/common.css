@@ -1,0 +1,438 @@
+@charset "utf-8";
+/*==========================================================================
+1 Reset Style
+2 common
+3 article
+4 header
+5 main
+6 table
+7 form
+8 footer
+9 calender
+10 profile pic preview
+11 form validation
+
+
+==========================================================================*/
+/*Reset Style*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,table,th,td {margin:0;padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img,abbr {border:0;}
+*{
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+ul {
+  list-style: none;
+}
+
+/*==========================================================================*/
+/*2 common*/
+body{
+  background-color: #f5f5f5;
+}
+
+
+a{
+  display: inline-block;
+}
+
+.move{
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.logo{
+  background-image: url("../img/logo.png");
+}
+
+.required{
+  color:red;
+}
+
+.autoLogin{
+    position: relative;
+    left: 9%;
+    bottom: 9px;
+    font-size: 20px;
+ }
+
+ .stayPeriod td{
+  margin-top: 10px;
+ }
+
+ .stayPeriod td span {
+    margin-right: 5%;
+    padding-left: 2%;
+  }
+
+  @media (min-width:376px){
+  .forSP{
+    display:none;
+  }
+}
+
+/*==========================================================================*/
+/*3 article*/
+/*==========================================================================*/
+/*4 header*/
+header{
+  height: 120px;
+  width: 100%;
+  background-color: #2E9AFE;
+  position: relative;
+}
+
+header img{
+  height:130px;
+  position: absolute;
+  left: 2%;
+
+}
+
+@media (min-width:375px){
+  header{
+    height:140px;
+  }
+
+  header img{
+  height:150px;
+  position: absolute;
+    left: 5%;
+}
+}
+
+
+
+
+/*==========================================================================*/
+/*5 main*/
+
+.main{
+  background-color: #f5f5f5;
+  width:100%;
+  padding: 0 5%;
+}
+
+@media (min-width:768px){
+  .main{
+    padding: 0 20%;
+  }
+}
+
+@media (min-width:1024px){
+  .main{
+    padding: 0 25%;
+  }
+}
+
+
+
+/*==========================================================================*/
+/*6 table*/
+
+
+th{
+  padding: 4px;
+  font-size:90%;
+}
+tr, th, td {
+  display: block;
+}
+th, td {
+  border-top: none;
+}
+
+
+
+tr span{
+  font-size: 20px;
+}
+th, td {
+  text-align: left;
+}
+.firstTr{
+  margin-top: 40px;
+}
+
+tr, th, td {
+  display: block;
+}
+th, td {
+  border-top: none;
+}
+
+table.loginDetails{
+  margin-bottom: 30px;
+  width: 100%;
+}
+table.loginDetails tr{
+  padding-top: 30px;
+
+}
+
+
+@media (min-width:1024px){
+  table.loginDetails tr{
+    padding-top: 60px;
+  }
+
+  table.loginDetails{
+    margin-bottom: 60px;
+  }
+  th, td {
+    display: inline-block;
+    text-align: center;
+  }
+
+  th{
+    width: 35%;
+  }
+
+}
+
+
+
+/*==========================================================================*/
+/*7 form*/
+input[type=submit],input[type=button]{
+  width: 50%;
+  background-color: #ffff64;
+  border-radius: 10px;
+  height: 50px;
+  margin-bottom:30px;
+
+}
+
+ input[name="profilePic"]{
+  display: none;
+ }
+
+input[type='text'],input[type='password'],input[type='email']
+{
+  width: 50%;
+  height: 50px;
+}
+
+input,textarea{
+  border-radius: 10px;
+  border: 1px solid #ccc
+}
+
+input[type=submit],input[type=button],.userForm label{
+  width: 100%;
+    color: white;
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    background-image: linear-gradient(0deg, #ff8b5f ,#ffff64 140%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-radius: 10px;
+    height: 50px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.userForm label{
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #ffffff;
+    background: #3498DB;
+    cursor: pointer;
+    margin:0;
+    text-align:center;
+}
+
+.userForm h1{
+  padding-top: 30px;
+  font-size:20px;
+  margin-bottom: 8px;
+}
+
+.userForm h1.thxComment{
+  margin-bottom: 200px;
+}
+@media (min-width:376px){
+ input[type=submit],input[type=button] {
+  width: 30%!important;
+  background-color: #ffff64;
+  border-radius: 210px;
+  height: 43px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+ }
+}
+
+textarea,input[type='text'],input[type='password'],input[type='email'],input[type='date'],input[type='datetime-local'],input[type='textarea'],input[type='number']{
+ width: 100%;
+ height: 35px;
+ padding-left: 10px;
+}
+
+
+
+@media (min-width:1024px){
+ textarea,input[type='text'],input[type='password'],input[type='email']{
+  width: 160%;
+}
+}
+
+  /*7-2 checkbox*/
+input[type=checkbox] {
+  display: none;
+}
+.check_css {
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 42px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.check_css:hover:after {
+  border-color: #0171bd;
+}
+.check_css:after {
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  position: absolute;
+  top: 23%;
+  left: 15px;
+  display: block;
+  margin-top: -10px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  content: '';
+}
+.check_css:before {
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  top: -9%;
+  left: 23px;
+  display: block;
+  margin-top: -7px;
+  width: 7px;
+  height: 20px;
+  border-right: 3px solid #0171bd;
+  border-bottom: 3px solid #0171bd;
+  content: '';
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+input[type=checkbox]:checked + .check_css:before {
+  opacity: 1;
+}
+
+.check_css span{
+  font-size:20px;
+}
+
+input[name="roomNumber"]{
+  width:30%;
+}
+
+
+/*==========================================================================*/
+/*8 footer*/
+
+footer{
+  height:100px;
+  width: 100%;
+  background-color: #585858;
+}
+
+/*9 calender*/
+
+.ui-datepicker th {
+  padding: .7em .3em;
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+  width: 14%;
+}
+
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled {
+  display:table-cell;
+}
+.ui-datepicker-calendar th, .ui-datepicker-calendar td{
+  display:table-cell;
+}
+
+.ui-datepicker-calendar tr{
+  display:table-row;
+}
+
+/*==========================================================================*/
+/*10 profile pic preview */
+
+#preview img{
+  max-width:100%;
+
+}
+
+#preview {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*================================================*/
+/*11 form validation*/
+.passwordMiss{
+  display: none;
+}
+.passwordMiss.on{
+    display: block;
+    margin: 20px 0 0 35%;
+    color: red;
+}
+
+.passwordMatch,.nickNameError,.emailError,.roomNumberError{
+  display: none;
+}
+.passwordMatch.on{
+    display: block;
+    margin: 20px 0 0 35%;
+    color: #66CD73;
+}
+
+.passwordShort{
+  display: none;
+}
+
+.passwordShort.on,.nickNameError.on,.emailError.on,.roomNumberError.on{
+    display: block;
+    margin: 20px 0 0 35%;
+    color: red;
+}
+
+input[disabled]{
+  background-color: #b7b7b7;
+}
+
+@media (max-width:1023px){
+  .passwordShort.on,.passwordMatch.on,.passwordMiss.on{
+        margin: 20px 0 0 0;
+
+  }
+
+}
+
+/*================================================*/
+
+
+
+
+
+
+
+
+
+
+

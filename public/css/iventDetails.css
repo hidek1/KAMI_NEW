@@ -1,0 +1,161 @@
+/********** イベントフォームのcss追記 ********************/
+#preview{
+	margin:50px auto 0 auto;
+}
+.iventDetails th{
+  font-size: 20px;
+}
+
+.iventDetails td{
+  width: 64%;
+  text-align: left;
+}
+
+input[name='budget']{
+	width:100px;
+}
+
+.iventCategories_tag{
+	padding-bottom: 113px;
+}
+
+.iventDetails .check_css{
+	background: #f5f5f5;
+    color: black;
+    display: inline-block;
+    width: 50%;
+    box-shadow: none;
+    text-align: left;
+}
+
+.iventDetails .check_css span{
+	font-size: 17px;
+    margin-left: 10%;
+}
+
+.iventDetails .check_css:after{
+	top: 40%;
+	left: -7px;
+}
+
+.iventDetails .check_css:before{
+	top: 18%;
+	left:0;
+}
+
+.textarea th{
+	padding-bottom: 150px;
+}
+
+.textarea td textarea{
+	height: 175px;
+}
+
+label.upload_btn{
+	width: 50%;
+}
+
+.main{
+	padding: 0 25%;
+
+}
+/********** イベントフォームのcss追記(レスポンシブ) ********************/
+@media (min-width: 1024px){
+	textarea, input[type='text'], input[type='password'], input[type='email'] {
+    	width: 100%;
+	}
+}
+
+@media (max-width: 1057px){
+	.main{
+		padding: 0 20%;
+
+	}
+}
+
+@media (max-width: 940px){
+	.main{
+		padding: 0 15%;
+
+	}
+}
+
+@media (max-width: 825px){
+	.main{
+		padding: 0 10%;
+
+	}
+}
+
+
+
+@media (min-width: 768px){
+	th, td {
+    	display: inline-block;
+    	text-align: center;
+    }
+    th {
+    	width: 35%;
+    }
+    table.loginDetails tr {
+    	padding-top: 60px;
+	}
+}
+
+@media (max-width: 767px){
+	.iventDetails th,.iventDetails td{
+  		display: block;
+  		margin:10px auto 0 auto;
+  		text-align: center;
+	}
+	.iventCategories_tag {
+    	padding-bottom: 0px;
+	}
+	.iventCategories label{
+		position: relative;
+    	left: 16%;
+	}
+	.textarea th{
+		padding-bottom: 0;
+	}
+}
+
+
+@media (max-width: 699px){
+	.main{
+		padding:0 5%;
+	}
+}
+
+@media (max-width: 500px){
+	.iventDetails th, .iventDetails td {
+    	margin: 10px 0 0 0;
+    	width: 100%;
+	}
+
+	label.upload_btn {
+    	width: 100%;
+	}
+
+	.iventDetails .check_css{
+		margin: 0 auto 0 auto;
+    	display: block;
+    	width: 60%;
+	}
+
+	table.loginDetails tr {
+    	padding-top: 0px;
+	}
+
+	.firstTr {
+   		margin-top: 0px;
+	}
+}
+
+
+
+
+
+
+
+
