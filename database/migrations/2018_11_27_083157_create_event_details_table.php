@@ -16,11 +16,11 @@ class CreateEventDetailsTable extends Migration
         Schema::create('event_details', function (Blueprint $table) {
             $default = "未設定";
             $table->increments('detail_id');
-            $table->string('max', 10)->default($default);
-            $table->string('min', 10)->default($default);
+            $table->integer('max')->default(0);
+            $table->integer('min')->default(0);
             $table->text('invite')->nullable();
             $table->text('detail')->nullable();
-            $table->string('price', 10)->default($default);
+            $table->integer('price')->default(0);
             $table->tinyInteger('graduation_fl')->default(0);
             $table->tinyInteger('teachers_fl')->default(0);
             $table->dateTime('detail_modified')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
