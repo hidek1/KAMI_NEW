@@ -43,12 +43,12 @@ return [
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
             // デフォルト
-            // 'port' => env('DB_PORT', '3306'),
-            // 
+            'port' => env('DB_PORT', '3306'),
+            //
             // カスタム
-            // pooh3はmysqlのポートが3308なので変更したけど、皆さんは適宜変更してください。
-            'port' => env('DB_PORT', '3308'),
-            // 
+            // pooh3のポート
+            //'port' => env('DB_PORT', '3308'),
+            //
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
@@ -56,11 +56,11 @@ return [
              // 編集前
             // 'charset' => 'utf8mb4',
             // 'collation' => 'utf8mb4_unicode_ci',
-            // 
+            //
             // 編集後
             'charset' => 'utf8',
             'collation' => 'utf8_general_ci',
-            // 
+            //
             'prefix' => '',
             'strict' => true,
             'engine' => null,
