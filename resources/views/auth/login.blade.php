@@ -1,7 +1,6 @@
 @extends('layout')
 @section('css')
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/iventDetails.css">
 
   {{-- CDN(Content Delivery Network) --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
