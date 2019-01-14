@@ -1,69 +1,45 @@
-@extends('layouts.app')
+@extends('layout')
+@section('css')
+  {{-- ペロ様確認POINT1 --}}
+  {{-- bootstrap不使用ペロ様確認済み --}}
+  {{-- <link rel="stylesheet" href="css/bootstrap.css"> --}}
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/iventDetails.css">
+
+  {{-- CDN(Content Delivery Network) --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all"/>
+@endsection
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+  {{-- ペロ様確認POINT2 --}}
+  {{-- レイアウト側のヘッダーと競合するためコメントアウト --}}
+<div class="main">
+  <form>
+    <table class="loginDetails">
+      <tr class="firstTr">
+        <th><span>メールアドレス</span></th>
+        <td><input type="email" name="email"></td>
+      </tr>
+      <tr>
+        <th><span>パスワード</span></th>
+        <td><input type="password" name="password"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="任意" value="ホームページ" id="hp" />
+                         <label for="hp" class="check_css"><span class="autoLogin">次回から自動ログイン</span></label>
+                    </td>
+      </tr>
+    </table>
+        <div class="move"><input type="submit" value="ログイン">
+        <input type="button" onclick="location.href='userForm.html'" value="新規会員登録"></div>
+  </form>
 </div>
+@endsection
+
+@section('js')
+  {{-- CDN(Content Delivery Network) --}}
+  <script tupe="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 @endsection

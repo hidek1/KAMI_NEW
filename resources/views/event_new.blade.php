@@ -15,9 +15,6 @@
 @section('content')
   {{-- ペロ様確認POINT2 --}}
   {{-- レイアウト側のヘッダーと競合するためコメントアウト --}}
-  {{-- <header> --}}
-    {{-- <img src="img/logo.png"> --}}
-  {{-- </header> --}}
   <div class="main userForm">
     <h1>イベント入力フォーム</h1>
     <form enctype="multipart/form-data" method="post" action="check.html">
@@ -91,8 +88,6 @@
       </div>
     </form>
   </div>
-  <footer>
-  </footer>
 @endsection
 
 @section('js')
