@@ -1,8 +1,5 @@
 @extends('layout')
 @section('css')
-  {{-- ペロ様確認POINT1 --}}
-  {{-- bootstrap不使用ペロ様確認済み --}}
-  {{-- <link rel="stylesheet" href="css/bootstrap.css"> --}}
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/iventDetails.css">
 
@@ -13,8 +10,6 @@
 @endsection
 
 @section('content')
-  {{-- ペロ様確認POINT2 --}}
-  {{-- レイアウト側のヘッダーと競合するためコメントアウト --}}
   <div class="main userForm">
     <h1>イベント入力フォーム</h1>
     <form enctype="multipart/form-data" method="post" action="check.html">
@@ -47,8 +42,6 @@
         </tr>
         <tr class="iventCategories">
           <th class="iventCategories_tag">タグ</th>
-            {{-- ペロ様確認POINT3 --}}
-            {{-- けいごさんにも確認取りましたが下記tdタグ内インデントするとスペース等の関係で表示がおかしくなるとの事でインデント無しで記載 --}}
             <td>
               <input type="checkbox" value="1" name="iventCategory1" id="iventCategory1"><label class="check_css" for="iventCategory1"><span>歓迎会</span></label><input type="checkbox" value="1" name="iventCategory2" id="iventCategory2"><label class="check_css" for="iventCategory2"><span>送別会</span></label><input type="checkbox" value="1" name="iventCategory2" id="iventCategory3">
               <label class="check_css" for="iventCategory3"><span>打ち上げ</span></label><input type="checkbox" value="1" name="iventCategory3" id="iventCategory4"><label class="check_css" for="iventCategory4"><span>先生も参加可</span></label>

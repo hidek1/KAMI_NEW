@@ -1,8 +1,5 @@
 @extends('layout')
 @section('css')
-  {{-- ペロ様確認POINT1 --}}
-  {{-- bootstrap不使用ペロ様確認済み --}}
-  {{-- <link rel="stylesheet" href="css/bootstrap.css"> --}}
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/iventDetails.css">
 
@@ -13,8 +10,6 @@
 @endsection
 
 @section('content')
-  {{-- ペロ様確認POINT2 --}}
-  {{-- レイアウト側のヘッダーと競合するためコメントアウト --}}
 <div class="main userForm">
     <h1>新規会員入力フォーム</h1>
     <h3><span class="required">※</span>入力フォームは,このページのみです</h3>
