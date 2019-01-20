@@ -25,7 +25,7 @@ class CreateEventsTable extends Migration
             $table->dateTime('answer_limit');
             $table->dateTime('event_created')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->dateTime('event_modified')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-            $table->foreign('organizer_id')->references('user_id')->on('users');
+            $table->foreign('organizer_id')->references('id')->on('users');
         });
     }
 
