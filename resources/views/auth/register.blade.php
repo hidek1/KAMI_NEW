@@ -12,17 +12,17 @@
 <div class="main userForm">
     <h1>新規会員入力フォーム</h1>
     <h3><span class="required">※</span>入力フォームは,このページのみです</h3>
-    <form enctype="multipart/form-data" method="post" action="check.html">
+    <form enctype="multipart/form-data" method="post" action="{{ route('register') }}">
         <table class="loginDetails">
             <tr class="firstTr">
                 <th><span>ニックネーム</span><span class="required">※</span></th>
                 <td><input class="requiredDetails empty" type="text" name="nickName" placeholder="kami 4文字以上"></td>
-    <td class="nickNameError">ニックネームは4文字以上15文字以下</td>
+            <td class="nickNameError">ニックネームは4文字以上15文字以下</td>
             </tr>
             <tr>
                 <th><span>メールアドレス</span><span class="required">※</span></th>
                 <td><input class="requiredDetails empty" type="email" name="email" placeholder="kami@kamimail.com"></td>
-    <td class="emailError">正しい形式で入力してください</td>
+            <td class="emailError">正しい形式で入力してください</td>
             </tr>
             <tr>
                 <th><span>パスワード</span><span class="required">※</span></th>
@@ -40,15 +40,18 @@
             <tr class="stayPeriod">
                 <th><span>滞在期間</span></th>
                 <td><span class="dateFrom">From</span><input type="date" placeholder="YYYY/MM/DD" name="contractDTFrom"></td>
-    <td><div></div></td>
-    <th></th>
+            <td>
+              <div>
+              </div>
+            </td>
+            <th></th>
                 <td><span class="dateFrom">To&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="date" placeholder="YYYY/MM/DD" name="contractDTTO"></td>
             </tr>
-  <tr>
-    <th><span>部屋番号</span></th>
-    <td><input pattern="^[0-9A-Za-z]+$" class="requiredDetails" type="text" name="roomNumber" placeholder="777"></td>
-    <td class="roomNumberError">半角英数字 5文字以内</td>
-  </tr>
+            <tr>
+              <th><span>部屋番号</span></th>
+              <td><input pattern="^[0-9A-Za-z]+$" class="requiredDetails" type="text" name="roomNumber" placeholder="777"></td>
+              <td class="roomNumberError">半角英数字 5文字以内</td>
+            </tr>
             <tr>
                 <th><span>プロフィール画像</span></th>
                 <td><label><i class="fas fa-upload faa-bounce animated"></i>&nbsp;&nbsp;アップロード<input accept="image/*" type="file" name="profilePic"></label></td>
@@ -56,10 +59,10 @@
                 <td id="preview"></td>
             </tr>
         </table>
-                <div class="move">
-                  <input type="button" onclick="history.back()" value="戻る">
-      <input class= "submit" type="submit" value="確認画面へ">
-    </div>
+        <div class="move">
+          <input type="button" onclick="history.back()" value="戻る">
+          <input class= "submit" type="submit" value="確認画面へ">
+        </div>
     </form>
 </div>
 @endsection

@@ -10,7 +10,7 @@
 
 @section('content')
 <div class="main">
-  <form>
+  <form class="form-horizontal" method="POST" action="{{ route('login') }}">
     <table class="loginDetails">
       <tr class="firstTr">
         <th><span>メールアドレス</span></th>
@@ -27,7 +27,7 @@
       </tr>
     </table>
         <div class="move"><input type="submit" value="ログイン">
-        <input type="button" onclick="location.href='userForm.html'" value="新規会員登録"></div>
+        <input type="button" onclick="location.href='register'" value="新規会員登録"></div>
   </form>
 </div>
 @endsection
