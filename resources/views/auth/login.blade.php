@@ -11,14 +11,25 @@
 @section('content')
 <div class="main">
   <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+      {{ csrf_field() }}
     <table class="loginDetails">
       <tr class="firstTr">
         <th><span>メールアドレス</span></th>
         <td><input type="email" name="email"></td>
+        @if ($errors->has('email'))
+            <span class="help-block">
+                <strong>{{ $errors->first('email') }}</strong>
+            </span>
+        @endif
       </tr>
       <tr>
         <th><span>パスワード</span></th>
         <td><input type="password" name="password"></td>
+            @if ($errors->has('password'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('password') }}</strong>
+                </span>
+            @endif
       </tr>
       <tr>
         <td><input type="checkbox" name="任意" value="ホームページ" id="hp" />

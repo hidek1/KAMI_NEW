@@ -13,10 +13,12 @@
     <h1>新規会員入力フォーム</h1>
     <h3><span class="required">※</span>入力フォームは,このページのみです</h3>
     <form enctype="multipart/form-data" method="post" action="{{ route('register') }}">
+      {{ csrf_field() }}
+
         <table class="loginDetails">
             <tr class="firstTr">
                 <th><span>ニックネーム</span><span class="required">※</span></th>
-                <td><input class="requiredDetails empty" type="text" name="nickName" placeholder="kami 4文字以上"></td>
+                <td><input class="requiredDetails empty" type="text" name="name" placeholder="kami 4文字以上"></td>
             <td class="nickNameError">ニックネームは4文字以上15文字以下</td>
             </tr>
             <tr>
@@ -32,7 +34,7 @@
             </tr>
             <tr>
                 <th><span>パスワード(確認用)</span><span class="required">※</span></th>
-                <td><input class="requiredDetails" type="password" name="confirmPassword" placeholder="上と同じパスワード" disabled></td>
+                <td><input class="requiredDetails" type="password" name="password_confirmation" placeholder="上と同じパスワード" disabled></td>
                 <td class="passwordMiss"><i class="fas fa-exclamation-circle"></i> パスワードが一致していません。</td>
                 <td class="passwordMatch"><i class="fas fa-check-circle"></i> パスワードが一致しました。</td>
 
@@ -90,7 +92,7 @@
 
     //ニックネームバリデーション 4文字以上１５文字以下
 
-    $("input[name='nickName']").blur(function(){
+    $("input[name='name']").blur(function(){
     if(($(this).val().length < 4)  || ($(this).val().length > 15) ){
       $(this).addClass("error");
       $(this).css('background-color','#ffdfd8  ');
@@ -104,7 +106,7 @@
     });
 
 
-    $("input[name='nickName']").keyup(function(){
+    $("input[name='name']").keyup(function(){
     if(!($(this).hasClass('empty'))) {
     if(($(this).val().length < 4)  || ($(this).val().length > 15) ){
       $(this).addClass("error");
@@ -171,7 +173,7 @@
     //パスワードバリデーション
 
     // var password =        リアルタイムのパスワードの値を代入したもの
-    // var confirmPassword = リアルタイムの確認用のパスワードの値を代入したもの
+    // var password_confirmation = リアルタイムの確認用のパスワードの値を代入したもの
     // var passwordCheck =   パスワードが一致してるかの判定開始フラグ
     // var passwordMatch =   パスワードが一致してるフラグ
 
@@ -189,7 +191,7 @@
           //背景色を白に戻す
           //確認用のパスワードを入力できるようにする
           //パスワードの値を変数passwordに代入する
-        var confirmPassword = "";
+        var password_confirmation = "";
         var passwordCheck ="";
         var password = "";
         $("input[name='password']").blur(function(){
@@ -246,12 +248,12 @@
                 password = $(this).val();
              }else{
                 if($(this).val().length >= 8){
-                    $("input[name='confirmPassword']").prop('disabled', false);
+                    $("input[name='password_confirmation']").prop('disabled', false);
                 }
              }
 
              if(passwordCheck == "on"){
-               if((confirmPassword == $(this).val()) && ($(this).val().length >= 8)){
+               if((password_confirmation == $(this).val()) && ($(this).val().length >= 8)){
                    $(".passwordMiss").removeClass("on");
                    $(".passwordMatch").addClass("on");
                 }else{
@@ -274,7 +276,7 @@
     // パスワード一致判定開始
     //もし一致してるならばエラー文削除、マッチ文表示
     //一致していない場合　エラー文表示　マッチ文削除
-        $("input[name='confirmPassword']").keyup(function(){
+        $("input[name='password_confirmation']").keyup(function(){
             if($(this).val().length >= 8){
               passwordCheck = "on";
             }
@@ -284,11 +286,11 @@
                if((password == $(this).val()) && (password.length >= 8)){
                    $(".passwordMiss").removeClass("on");
                    $(".passwordMatch").addClass("on");
-                   confirmPassword = $(this).val();
+                   password_confirmation = $(this).val();
                 }else{
                    $(".passwordMiss").addClass("on");
                    $(".passwordMatch").removeClass("on");
-                   confirmPassword = $(this).val();
+                   password_confirmation = $(this).val();
                    if(password.length < 8){
                     $(".passwordMiss").removeClass("on");
                    }
