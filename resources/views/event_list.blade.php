@@ -47,12 +47,17 @@ color:#7fbfff;
 .buttons {
   text-align: center;
 }
+.modal_explain{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="{{asset('css/flickity.min.css')}}">
 <script type="text/javascript" src="{{asset('js/flickity.pkgd.min.js')}}"></script>
 @endsection
 
 @section('content')
+
 <div class="row">
   <div class="col-xs-12 col-md-6 col-md-offset-3">
   <h4>イベントを検索</h4>
@@ -64,27 +69,52 @@ color:#7fbfff;
 </div>
 <h4 class="home_title">検索結果</h4>
 <div class="row">
+    <!--
+     +"event_id": 1
+    +"organizer_id": 1
+    +"event_name": "zNaDs9nAFm"
+    +"start": "2022-01-01 12:10:42"
+    +"event_place": "mwAcBbCdmS"
+    +"event_pic": "images/ERxM8s8f.jpg"
+    +"meet_time": "2018-12-01 12:10:42"
+    +"meet_place": "7g6FNLpti5"
+    +"answer_limit": "2022-01-01 12:10:42"
+    +"event_created": "2018-12-01 12:10:42"
+    +"event_modified": "2019-02-23 15:15:36"
+    +"detail_id": 1
+    +"max": 200
+    +"min": 100
+    +"invite": "nYiKnXU7"
+    +"detail": "GqwXf5G9PDdiD67KLNqI"
+    +"price": 1980
+    +"graduation_fl": 0
+    +"teachers_fl": 0
+    +"detail_modified": "2018-12-01 12:10:42" -->
+  @for ($i = 0; $i < count($events); $i++)
   <div class="col-xs-6 col-md-4 home_img padding0">
-    <img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" alt="baby-1151351_1920" width="1920" height="1440" class="img-responsive thumbnail　aligncenter size-full wp-image-425" data-toggle="modal" data-target="#image_Modal" style="cursor:pointer" /> 
-    <h5>イベント名<span class="pull-right">4/5 18:00〜</span></h5>
-    <div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <img src="{{ $events[$i]->event_pic }}" alt="baby-1151351_1920" width="1920" height="1440" class="img-responsive thumbnail　aligncenter size-full wp-image-425" data-toggle="modal" data-target="#{{ $i }}" style="cursor:pointer" />
+    <h5>{{ $events[$i ]->event_name }}<span class="pull-right">4/5 18:00〜</span></h5>
+    <div class="modal fade" id="{{ $i}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
       <div class="modal-dialog modal-lg modal-middle">
         <div class="modal-content">
           <div class="modal-body">
-          <img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" alt="baby-1151351_1920" width="100%" class="aligncenter size-full wp-image-425" alt="baby-1151351_1920" />
+          <img src="{{ $events[$i]->event_pic }}" alt="baby-1151351_1920" width="100%" class="aligncenter size-full wp-image-425"/>
           </div>
           <div class="modal-img_footer">
-            <p>イベント名</p>
-            <p>回答期限：9月5日02時20分</p>
-            <p>開催場所: シクノイ</p>
-            <p>開催日: 4月5日</p>
-            <p>開始時間:　03時30分</p>
-            <p>参加予定人数 2人/25人</p>
-            詳細
-            <p>やっっっっっっっっっっっっっっっっっばいぜええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええええ</p>
+            <div class="modal_explain">
+              <p>{{ $events[$i]->event_name }}</p>
+              <p>回答期限: {{ date('m月d日 H時i分',  strtotime($events[$i]->answer_limit)) }}</p>
+              <p>開催場所: {{ $events[$i]->event_place }}</p>
+              <p>開催日: {{ date('m月d日',  strtotime($events[$i]->start)) }}</p>
+              <p>開始時間: {{ date('H時i分',  strtotime($events[$i]->start)) }}</p>
+              <p>参加予定人数: 2人/{{ $events[$i]->max }}人</p>
+              詳細
+              <p>{{ $events[$i]->detail }}</p>
+            </div>
             <div class="row p-row">
               <div class="col-xs-6">
                 <p>参加者</p>
+
                 <div class="flickity-syncer">
                   <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" class="participants"/></div>
                   <div><img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" class="participants"/></div>
@@ -109,6 +139,24 @@ color:#7fbfff;
             <button type="button" class="btn btn-primary">⭐️興味あり</button>
             <button type="button" class="btn btn-success" data-dismiss="modal">閉じる</button>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  @endfor
+  <div class="col-xs-6 col-md-4 home_img padding0">
+    <img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" alt="baby-1151351_1920" width="1920" height="1440" class="img-responsive thumbnail　aligncenter size-full wp-image-425" data-toggle="modal" data-target="#image_Modal" style="cursor:pointer" /> 
+    <h5>イベント名<span class="pull-right">4/5 18:00〜</span></h5>
+    <div class="modal fade" id="image_Modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg modal-middle">
+        <div class="modal-content">
+          <div class="modal-body">
+          <img src="http://pilgrim-guild.com/wp-content/uploads/2016/11/baby-1151351_1920.jpg" alt="baby-1151351_1920" width="100%" class="aligncenter size-full wp-image-425" alt="baby-1151351_1920" />
+          </div>
+          <div class="modal-img_footer">
+          <p></p>
+          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

@@ -26,9 +26,8 @@ Route::get('/login', function () {
 Route::get('/index', function () {
     return view('index');
 });
-Route::get('/event_list', function () {
-    return view('event_list');
-});
+Route::get('/event_list', 'EventsController@index');
+
 Route::get('/event_new', function () {
     return view('event_new');
 });
