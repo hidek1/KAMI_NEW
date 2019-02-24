@@ -1,7 +1,6 @@
 @extends('layout')
 @section('css')
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/iventDetails.css">
 
   {{-- CDN(Content Delivery Network) --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
@@ -11,15 +10,26 @@
 
 @section('content')
 <div class="main">
-  <form>
+  <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+      {{ csrf_field() }}
     <table class="loginDetails">
       <tr class="firstTr">
         <th><span>メールアドレス</span></th>
         <td><input type="email" name="email"></td>
+        @if ($errors->has('email'))
+            <span class="help-block">
+                <strong>{{ $errors->first('email') }}</strong>
+            </span>
+        @endif
       </tr>
       <tr>
         <th><span>パスワード</span></th>
         <td><input type="password" name="password"></td>
+            @if ($errors->has('password'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('password') }}</strong>
+                </span>
+            @endif
       </tr>
       <tr>
         <td><input type="checkbox" name="任意" value="ホームページ" id="hp" />
@@ -28,7 +38,7 @@
       </tr>
     </table>
         <div class="move"><input type="submit" value="ログイン">
-        <input type="button" onclick="location.href='userForm.html'" value="新規会員登録"></div>
+        <input type="button" onclick="location.href='register'" value="新規会員登録"></div>
   </form>
 </div>
 @endsection
